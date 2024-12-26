@@ -1,0 +1,88 @@
+/* Style the header with a green color scheme similar to the Breaking Bad theme */
+header {
+    background-color: #2E8B57; /* Dark green */
+    color: #FFF; /* White text for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #FFF; /* White text for contrast */
+    text-decoration: none;
+}
+
+/* Style the sections with a black background and yellow text for a gritty feel */
+section {
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Yellow text */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a smoother look */
+}
+
+/* Headings in sections */
+h2 {
+    color: #32CD32; /* Lime green for headings to stand out */
+}
+
+/* Product categories styling */
+.product-category {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #FFD700; /* Yellow border for emphasis */
+    border-radius: 5px;
+}
+
+.product-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-category ul li {
+    margin: 5px 0;
+}
+
+/* Footer styling with a green background and white text */
+footer {
+    background-color: #2E8B57; /* Dark green */
+    color: #FFF; /* White text */
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #FFD700; /* Yellow border at the top for separation */
+}
+
+/* Add some general styling for buttons to match the theme */
+button {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #32CD32; /* Lime green on hover */
+    color: #FFF; /* White text on hover */
+}
+
+/* Ensure links are styled appropriately */
+a {
+    color: #FFD700; /* Yellow links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #32CD32; /* Lime green on hover */
+}
