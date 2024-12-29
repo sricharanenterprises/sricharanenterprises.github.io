@@ -1,88 +1,205 @@
-/* Style the header with a green color scheme similar to the Breaking Bad theme */
-header {
-    background-color: #2E8B57; /* Dark green */
-    color: #FFF; /* White text for contrast */
-    padding: 20px;
+/* General Reset and Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background for a gritty feel */
+    color: #FFD700; /* Yellow text for contrast */
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2E8B57; /* Dark green background */
+    padding: 10px 0;
     text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #FFF; /* White text for contrast */
-    text-decoration: none;
-}
-
-/* Style the sections with a black background and yellow text for a gritty feel */
-section {
-    background-color: #000; /* Black background */
-    color: #FFD700; /* Yellow text */
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners for a smoother look */
-}
-
-/* Headings in sections */
-h2 {
-    color: #32CD32; /* Lime green for headings to stand out */
-}
-
-/* Product categories styling */
-.product-category {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 2px solid #FFD700; /* Yellow border for emphasis */
-    border-radius: 5px;
-}
-
-.product-category ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.product-category ul li {
-    margin: 5px 0;
-}
-
-/* Footer styling with a green background and white text */
-footer {
-    background-color: #2E8B57; /* Dark green */
     color: #FFF; /* White text */
-    text-align: center;
-    padding: 10px;
-    border-top: 3px solid #FFD700; /* Yellow border at the top for separation */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Add some general styling for buttons to match the theme */
-button {
+nav ul li a:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #FFF; /* White text for readability */
+    position: relative;
+    overflow: hidden;
+}
+
+header .logo img {
+    width: 150px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header .hero {
+    margin-top: 20px;
+}
+
+header .hero h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+                blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+header .hero button {
     background-color: #FFD700; /* Yellow background */
     color: #000; /* Black text */
     border: none;
     padding: 10px 20px;
-    margin: 10px 0;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
+header .hero button:hover {
     background-color: #32CD32; /* Lime green on hover */
     color: #FFF; /* White text on hover */
 }
 
-/* Ensure links are styled appropriately */
-a {
-    color: #FFD700; /* Yellow links */
-    text-decoration: none;
+/* Products Section */
+#products {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-a:hover {
-    color: #32CD32; /* Lime green on hover */
+#products h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #32CD32; /* Lime green for headings */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2E2E2E; /* Dark grey for contrast */
+    color: #FFF; /* White text */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Yellow glow effect */
+}
+
+/* Popup Styles */
+#product-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #2E2E2E; /* Dark grey background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: #FFF; /* White text */
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #FFF; /* White text */
+}
+
+#popup-details {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #32CD32; /* Lime green for headings */
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2E8B57; /* Dark green background */
+    color: #FFF; /* White text */
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #FFD700; /* Yellow top border */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
+}
+
+.header .hero h1 {
+    border-right: 0.15em solid rgba(255, 255, 255, 0.75); /* Typewriter cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
 }
