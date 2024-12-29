@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Charan Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Page -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Sri Charan Enterprises Logo">
+        </div>
+        <div class="hero">
+            <h1>Your trusted partner in Raw Materials, Excipients, Bulk Drugs (API), and Industrial Chemicals.</h1>
+            <button id="cta-button">Explore Our Products</button>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Example Product Card -->
+            <div class="product-card" data-product="sulphates">
+                <h3>Sulphates</h3>
+            </div>
+            <div class="product-card" data-product="acids">
+                <h3>Acids</h3>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+
+    <!-- Product Popup -->
+    <div id="product-popup" class="hidden">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <div id="popup-details"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please reach out to us at:</p>
+        <p>Email: sricharanenterprise@gmail.com</p>
+        <p>Phone: +91 8465051118 - (Charan) / +91 9177272070 - (Srinivas)</p>
+        <p>Address: Hno: 2-3-352/2/62, P.N. Rao Complex, Sai Nagar Colony, Road No. 6, Nagole, Hyderabad - 68.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sri Charan Enterprises. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
